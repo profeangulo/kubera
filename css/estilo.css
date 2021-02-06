@@ -1,0 +1,5 @@
+/* Títulos, Enlaces y Botones */
+h1, h2, h3, a, button { font-family: 'Montserrat', sans-serif; }
+
+/* Subtítulos, Párrafos, Formularios y otras etiquetas de textos */
+h4, h5, h6, p, form, input, select, textarea, option, table, tr, th, td, span, div, strong, em { font-family: 'Poppins', sans-serif; }
