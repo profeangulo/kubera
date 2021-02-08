@@ -232,7 +232,12 @@ body {
     .text-division { padding: 40px 55px 0 55px; }    
 }
 
+@media only screen and (max-width: 899px){
+    
+}
 
-
+@media only screen and (max-width: 499px){
+    
+}
 
 
