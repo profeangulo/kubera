@@ -28,7 +28,7 @@
   <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="97" tabindex="0">
     <!-- Boton flotante -->
     <div class="col cajaf">
-      <a href="#informacion" class="btn btn-outline-dark btn_position">Solicitar una demostración</a>
+      <a href="#informacion" class="btn btn-outline-dark btn_position">Solicitar Demo</a>
     </div>
     <!-- /Boton flotante -->
     <!-- Header -->
@@ -38,8 +38,8 @@
           <a class="navbar-brand" href="#">
             <img class="header" src="./assets/img/kubera-logo.png" alt="logo kubera">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button class="navbar-toggler btn-mobile" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon icon-btn-nav"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -53,7 +53,10 @@
                 <a class="nav-link text-nav" href="#fondo-azul">Beneficios&nbsp;&nbsp;</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link btn btn-nav-style" href="#informacion">Deseo más información</a>
+                <a class="nav-link btn btn-nav-style-demo text-nav" href="#informacion">Solicitar Demo&nbsp;&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-nav-style text-nav button-ingresa" href="javascript:selectModal()">Acceso a Usuarios</a>
               </li>
             </ul>
           </div>
@@ -63,7 +66,7 @@
     <!-- /Header -->
     <!-- Carousel -->
     <main id="ventajas">
-      <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="hover">
+      <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="./assets/img/kubera-slide-01.png" class="d-block w-100" alt="kubera1">
@@ -71,7 +74,7 @@
               <div class="container">
                 <div class="row align-items-center">
                   <div class="col-12 col-md-6 text-center text-md-start">
-                    <p class="d-md-block text-carousel">Potencia la productividad<br /> en tu empresa y de tus colaboradores.</p>
+                    <p class="d-md-block text-carousel">Potencia la productividad en tu empresa y de tus colaboradores.</p>
                     <a class="btn btn-carousel" href="#division">Ver más</a>
                   </div>
                 </div>
@@ -84,7 +87,7 @@
               <div class="container">
                 <div class="row align-items-center">
                   <div class="col-12 col-md-6 text-center text-md-start">
-                    <p class="d-md-block text-carousel">Potencia la productividad<br /> en tu empresa y de tus colaboradores.</p>
+                    <p class="d-md-block text-carousel">Incentiva la integración y el liderazgo en tus colaboradores con un sistema de recompensas.</p>
                     <a class="btn btn-carousel" href="#fondo-azul">Ver más</a>
                   </div>
                 </div>
@@ -97,7 +100,7 @@
               <div class="container">
                 <div class="row align-items-center">
                   <div class="col-12 col-md-6 text-center text-md-start">
-                    <p class="d-md-block text-carousel">Potencia la productividad<br /> en tu empresa y de tus colaboradores.</p>
+                    <p class="d-md-block text-carousel">Genera mayor motivación a través de retos con obtención de reconocimientos y premios.</p>
                     <a class="btn btn-carousel" href="#informacion">Ver más</a>
                   </div>
                 </div>
@@ -105,6 +108,14 @@
             </div>
           </div>
         </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
       </div>
     </main>
     <!-- /Carousel -->
@@ -120,7 +131,7 @@
             </p>
           </div>
           <div class="col-12 col-md-6 col-lg-6 division2">
-            <img class="pt-4 ps-4 pb-3" src="./assets/img/kubera-trofeo.png" alt="trofeo">
+            <img class="pt-4 ps-4 pb-0" src="./assets/img/kubera-trofeo.png" alt="trofeo">
             <ul class="text-division">
               <ol>-Implementa estrategias de incentivos y beneficios.</ol>
               <ol>-Mejora la productividad en las empresas.</ol>
@@ -170,7 +181,7 @@
                    - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
                    - The Mandatory check script can modified as to suit your business needs. 
                    - It is important that you test the modified form before going live.-->
-                <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='background-color: white;color: black;max-width: 600px;'>
+                <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='background-color: transparent;color: black;max-width: 600px;'>
                   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
                    <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
                    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
@@ -187,7 +198,7 @@
                 }
                 #crmWebToEntityForm.zcwf_lblLeft {
                   width:100%;
-                  padding: 25px;
+                  padding: 0px;
                   margin: 0 auto;
                   box-sizing: border-box;
                 }
@@ -204,11 +215,12 @@
                   font-weight: bold;
                 }
                 .zcwf_lblLeft .zcwf_col_fld input[type=text], .zcwf_lblLeft .zcwf_col_fld textarea {
-                  width: 60%;
+                  width: 100%;
                   border: 1px solid #ccc;
                   resize: vertical;
-                  border-radius: 2px;
+                  border-radius: 15px;
                   float: left;
+                  padding: 6px;
                 }
                 .zcwf_lblLeft .zcwf_col_lab {
                   width: 30%;
@@ -221,10 +233,10 @@
                 }
                 .zcwf_lblLeft .zcwf_col_fld {
                   float: left;
-                  width: 68%;
+                  width: 100%;
                   padding: 0px 6px 0px;
                   position: relative;
-                  margin-top: 5px;
+                  margin-top: 0px;
                 }
                 .zcwf_lblLeft .zcwf_privacy{padding: 6px;}
                 .zcwf_lblLeft .wfrm_fld_dpNn{display: none;}
@@ -264,7 +276,7 @@
                   font-weight: bold;
                   border-radius: 50%;
                 }
-                .zcwf_lblLeft .zcwf_row {margin: 15px 0px;}
+                .zcwf_lblLeft .zcwf_row {margin: 2px 0px;}
                 .zcwf_lblLeft .formsubmit {
                   margin-right: 5px;
                   cursor: pointer;
@@ -327,14 +339,13 @@
                   .zcwf_lblLeft .zcwf_col_help {width: 40%;}
                 }
                 </style>
-                <div class='zcwf_title' style='max-width: 600px;color: black;'>Landing Kubera</div>
-                <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='First_Name'>Nombre<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='First_Name' name='First Name' maxlength='40'></input><div class='zcwf_col_help'></div></div></div>
-                <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Last_Name'>Apellidos<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'></input><div class='zcwf_col_help'></div></div></div>
-                <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Email'>Correo electrónico<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' ftype='email' id='Email' name='Email' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
-                <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Phone'>Tel&eacute;fono</label></div><div class='zcwf_col_fld'><input type='text' id='Phone' name='Phone' maxlength='30'></input><div class='zcwf_col_help'></div></div></div>
-                <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Company'>Empresa</label></div><div class='zcwf_col_fld'><input type='text' id='Company' name='Company' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
-                <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Description'>Informaci&oacute;n adicional</label></div><div class='zcwf_col_fld'><textarea id='Description' name='Description'></textarea><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'> <div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><div class='g-recaptcha' data-sitekey='6LeLLU0aAAAAAGdKHso6Yb_3y53Ttn9gUG-cpuDs' data-theme='light' data-callback='rccallback517082000024192043' captcha-verified='false' id='recap517082000024192043'></div><div  id='recapErr517082000024192043' style='font-size:12px;color:red;visibility:hidden;'>Error en validación de Captcha. Si no es un robot, inténtelo de nuevo.</div></div></div><div class='zcwf_row'><div class='zcwf_privacy'><div class='dIB vat' align='left'><div class='displayPurpose  f13'><label class='newCustomchkbox-md dIB w100per'><input autocomplete='off' id='privacyTool517082000024192043' type='checkbox' name='privacyTool' onclick='disableErr517082000024192043()'></label></div></div><div class='dIB zcwf_privacy_txt' style='font-size: 12px;font-family:Arial;color: black;'><span style='font-family: proxima-nova; font-size: 15px; background-color: rgb(255, 255, 255);'><b>Acepto la Política de privacidad y los Términos de servicio</b></span></div> <div  id='privacyErr517082000024192043' style='font-size:12px;color:red;padding-left: 5px;visibility:hidden;'>Acepte por favor</div></div></div>
-                <div class='zcwf_row wfrm_fld_dpNn'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Lead_Status'>Estado de Prospectos</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='Lead_Status' name='Lead Status'  >
+                <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Montserrat, Arial;'><label for='First_Name'>Nombre<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='First_Name' name='First Name' maxlength='40'></input><div class='zcwf_col_help'></div></div></div>
+                <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Montserrat, Arial;'><label for='Last_Name'>Apellidos<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'></input><div class='zcwf_col_help'></div></div></div>
+                <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Montserrat, Arial;'><label for='Email'>Correo electrónico<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' ftype='email' id='Email' name='Email' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
+                <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Montserrat, Arial;'><label for='Phone'>Tel&eacute;fono</label></div><div class='zcwf_col_fld'><input type='text' id='Phone' name='Phone' maxlength='30'></input><div class='zcwf_col_help'></div></div></div>
+                <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Montserrat, Arial;'><label for='Company'>Empresa</label></div><div class='zcwf_col_fld'><input type='text' id='Company' name='Company' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
+                <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Montserrat, Arial;'><label for='Description'>Informaci&oacute;n adicional</label></div><div class='zcwf_col_fld'><textarea id='Description' name='Description'></textarea><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'> <div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><div class='g-recaptcha' data-sitekey='6LeLLU0aAAAAAGdKHso6Yb_3y53Ttn9gUG-cpuDs' data-theme='light' data-callback='rccallback517082000024192043' captcha-verified='false' id='recap517082000024192043'></div><div  id='recapErr517082000024192043' style='font-size:12px;color:red;visibility:hidden;'>Error en validación de Captcha. Si no es un robot, inténtelo de nuevo.</div></div></div><div class='zcwf_row'><div class='zcwf_privacy'><div class='dIB vat' align='left'><div class='displayPurpose  f13'><label class='newCustomchkbox-md dIB w100per'><input autocomplete='off' id='privacyTool517082000024192043' type='checkbox' name='privacyTool' onclick='disableErr517082000024192043()'></label></div></div><div class='dIB zcwf_privacy_txt' style='font-size: 12px;font-family: Montserrat, Arial;color: black;'><span style='font-family: Montserrat; font-size: 15px; background-color: rgb(255, 255, 255);'><b>Acepto la Política de privacidad y los Términos de servicio</b></span></div> <div  id='privacyErr517082000024192043' style='font-size:12px;color:red;padding-left: 5px;visibility:hidden;'>Acepte por favor</div></div></div>
+                <div class='zcwf_row wfrm_fld_dpNn'><div class='zcwf_col_lab' style='font-size:12px; font-family: Montserrat, Arial;'><label for='Lead_Status'>Estado de Prospectos</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='Lead_Status' name='Lead Status'  >
                       <option value='-None-'>-None-</option>
                     <option selected value='No&#x20;Contactado'>No Contactado</option>
                       <option value='Contactar&#x20;en&#x20;el&#x20;futuro'>Contactar en el futuro</option>
@@ -949,12 +960,12 @@
                       <option value='Mayor&#x20;a&#x20;&#x24;8&#x20;Millones'>Mayor a &#x24;8 Millones</option>
                     <option selected value='No&#x20;definido'>No definido</option>
                     </select><div class='zcwf_col_help'></div></div></div>
-                <div class='zcwf_row wfrm_fld_dpNn'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF17'>&iquest;C&oacute;mo ha pensado financiar el proyecto&#x3f;</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='LEADCF17' name='LEADCF17'  >
+                <div class='zcwf_row wfrm_fld_dpNn'><div class='zcwf_col_lab' style='font-size:12px; font-family: Montserrat ,Arial;'><label for='LEADCF17'>&iquest;C&oacute;mo ha pensado financiar el proyecto&#x3f;</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='LEADCF17' name='LEADCF17'  >
                       <option value='-None-'>-None-</option>
                       <option value='Recursos&#x20;Propios'>Recursos Propios</option>
                       <option value='Recursos&#x20;Externos'>Recursos Externos</option>
                     <option selected value='No&#x20;definido'>No definido</option>
-                    </select><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Enviar' title='Enviar'><input type='reset' class='zcwf_button' name='reset' value='Restablecer' title='Restablecer'></div></div>
+                    </select><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><input type='submit' id='formsubmit' class='formsubmit zcwf_button btn-form-enviar' value='Enviar' title='Enviar'><input type='reset' class='zcwf_button' name='reset' value='Restablecer' title='Restablecer'></div></div>
                   <script>
                     function privacyAlert517082000024192043()
                     {
@@ -1103,25 +1114,34 @@
             <img class="img-minciencias ps-2" src="./assets/img/kubera-minciencias.png" alt="kubera minciencias">
           </div>
         </div>
-        <div class="row">
-          <div class="col pb-5">
-            <!-- Faltan imagenes -->
+        <div class="row align-items-center">
+          <div class="col-3 col-md-3 col-lg-3">
+            <img class="img-atlantico" src="./assets/img/kubera-atlantico.jpg" alt="kubera atlantico">
+          </div>
+          <div class="col-3 col-md-3 col-lg-3">
+            <img class="img-acopi" src="./assets/img/kubera-acopi.png" alt="kubera acopi">
+          </div>
+          <div class="col-3 col-md-3 col-lg-3">
+            <img class="img-sgr" src="./assets/img/kubera-sgr.png" alt="kubera sgr">
+          </div>
+          <div class="col-3 col-md-3 col-lg-3">
+            <img class="img-cuc" src="./assets/img/kubera-cuc.png" alt="kubera cuc">
           </div>
         </div>
         <div class="row">
-          <div class="col-6 pb-5">
+          <div class="col-6 pt-5 pb-5">
             <img class="img-premios" src="./assets/img/kubera-premios.png" alt="premios kubera">
           </div>
         </div>
         <div class="row">
           <div class="col-9 offset-3 col-md-9 offset-md-3 col-lg-11 offset-lg-1">
-            <img class="ps-1 img-sennova" src="./assets/img/kubera-sennova-prueba.png" alt="kubera sennova">
-            <img class="pe-5 img-creame" src="./assets/img/kubera-creame-prueba.png" alt="kubera creame">
+            <img class="ps-1 img-sennova" src="./assets/img/kubera-sennova.png" alt="kubera sennova">
+            <img class="pe-5 img-creame" src="./assets/img/kubera-creame.png" alt="kubera creame">
           </div>
         </div>
         <div class="row">
           <div class="col-9 offset-3 col-md-8 offset-md-3 col-lg-6 offset-lg-4 pt-3 pb-5">
-            <img class="img-iconos" src="./assets/img/kubera-iconos-prueba.png" alt="kubera iconos">
+            <img class="img-iconos" src="./assets/img/kubera-iconos.png" alt="kubera iconos">
           </div>
         </div>
       </div>
@@ -1130,9 +1150,18 @@
     <!-- Footer -->
     <footer id="footer">
       <div class="container-fluid ps-0 pe-0">
-        <div id="img-footer" class="row ms-0">
-          <div class="col">
-            
+        <div id="img-footer" class="row ms-0 align-items-center">
+          <div class="col-3 offset-1 col-md-3 offset-md-1 col-lg-3 offset-lg-1 ps-5">
+            <a href="http://www.kubera.com.co/"><img src="./assets/img/kubera-logo.png" alt="kubera logo"></a>
+          </div>
+          <div class="col-sm col-md-3 offset-md-1 col-lg-3 offset-lg-1 ps-4 pt-4">
+            <a class="color-icon" href="https://www.instagram.com/kubera_motivacion/"><i class="fab fa-instagram fa-2x">&nbsp;&nbsp;</i></a>
+            <a class="color-icon" href="https://www.facebook.com/OpenskyConsultores"><i class="fab fa-facebook fa-2x">&nbsp;&nbsp;</i></a>
+            <a class="color-icon" href="https://twitter.com/openskycolombia"><i class="fab fa-twitter fa-2x">&nbsp;&nbsp;</i></a>
+            <a class="color-icon" href="https://www.linkedin.com/company/opensky-consultores-s-a-s"><i class="fab fa-linkedin-in fa-2x"></i></a>
+          </div>
+          <div class="col-sm col-md col-lg ps-5">
+            <a href="http://www.opensky.com.co/"><img src="./assets/img/kubera-opensky.png" alt="kubera opensky"></a>
           </div>
         </div>
       </div>
