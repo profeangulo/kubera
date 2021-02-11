@@ -562,4 +562,19 @@ aside#mobile-menu nav#links-mobile a:hover { color: #fff !important; text-decora
     padding: 50px 0 120px 0;
 }
 
+.btn-ventana-modal {
+    font-family: 'Montserrat', sans-serif;
+    color: white !important;
+    background-color: #46bebd;
+}
+
+.btn-ventana-modal:hover {
+    background-color: #D78241;
+    border-color: #D78241;
+}
+
+.text-modal {
+    font-family: 'Montserrat', sans-serif;
+}
+
 
