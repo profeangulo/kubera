@@ -134,7 +134,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9em;
     line-height: 1.75em;
-    padding: 55px 115px 0 115px;
+    padding: 55px 115px 10px 115px;
     font-weight: 600;
     letter-spacing: 0.035em;
 }
@@ -507,7 +507,7 @@ aside#mobile-menu nav#links-mobile a:hover { color: #fff !important; text-decora
 @media only screen and (max-width: 1099px){
     .text-division { 
         padding: 10px 30px 170px 30px;
-     }    
+     }
     .img-usuarios { 
         position: relative;
         margin: 0 auto;
@@ -537,6 +537,7 @@ aside#mobile-menu nav#links-mobile a:hover { color: #fff !important; text-decora
     figure#logos-entidades img { width: 80%; height: auto; }
     figure#logos-premios img { width: 80%; height: auto; }
 
+    ul.text-division li { padding: 0 0 15px 0; line-height: 1.35em; }
     ul.text-division li:nth-child(3),
     ul.text-division li:nth-child(4),
     ul.text-division li:nth-child(5),
